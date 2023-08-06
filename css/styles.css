@@ -1691,7 +1691,7 @@ header .menu-icon .section-title {
 		margin-bottom: 0;
 	}
 	.home-bottom .home-bottom-text{
-		padding: 12rem 4rem 0;
+		padding: 20rem 4rem 0;
 		justify-content: start;
 		row-gap: 2rem;
 	}
@@ -1712,11 +1712,12 @@ header .menu-icon .section-title {
 		
 	/*MINI SECTION*/
 	.mini-section-container {
-		height: 0;
+		height: 20%;
 	}
 	.mini-section-container .square{
 		width: 220px;
-		right: 4rem;
+		right: 5rem;
+		bottom: -1rem;
 	}
 	.mini-section-container .pc{
 		bottom: -17rem;
@@ -1747,16 +1748,20 @@ header .menu-icon .section-title {
 		line-height: 18px;
 	}	
 	.aboutus .about-text .read-more a{
-		font-size: 24px;
-		line-height: 28px;
-		padding: 1.5rem 4rem;
-		width: 300px;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 1rem 1rem;
+		width: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.aboutus .about-text .read-more a span{
 		margin-left: 1rem;
 	}
 	.aboutus .about-text .read-more a span svg{
-		width: 35px;
+		width: 20px;
+		display: flex;
 	}	
 
 	/*SERVICES*/
@@ -1953,20 +1958,22 @@ header .menu-icon .section-title {
 	}
 	
 	.contactus .contactus-text .contactus-more a{
-		font-size: 22px;
-		line-height: 28px;
-		padding: 2rem 2rem;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 1rem;
 		border-radius: 50px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 150px;
 	}
 	.contactus .contactus-text .contactus-more a span {
 		display: flex;
     	align-items: center;
+		margin-left: 1rem;
 	}
 	.contactus .contactus-text .contactus-more a span svg{
-		width: 35px !important;
+		width: 20px !important;
 	}
 	.contactus .contactus-text .contactus-social {
 		column-gap: 2rem;
