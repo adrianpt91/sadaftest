@@ -161,9 +161,7 @@ carousel.addEventListener("touchmove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
 
-/*  Javascript filter
----------------------------------*/
-// animate divs on start
+// Animate divs on work carousel
 var items = document.querySelectorAll('.filter-works img');
 animate(items);
 
