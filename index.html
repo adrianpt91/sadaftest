@@ -125,10 +125,9 @@
 					<div class="discover-more">
 						<a href="#aboutus">DISCOVER</a>
 					</div>
-					<img class="circle" src="images/yellow_circle.png" alt="yellow circle">
-					<img class="building" src="images/dubai_buildings.png" alt="dubai buildings img">
-					<img id="fade_img1" class="square" src="images/mini_section_square.png" alt="yellow square">
-					<img id="fade_img2" class="pc" src="images/mini_section_img.png" alt="laptop img">	
+					<img class="cactus1" src="images/home/cactus1.png" alt="cactus 1">
+					<img class="cactus2" src="images/home/cactus2.png" alt="cactus 2">
+					<img class="dessert" src="images/home/dessert.png" alt="dessert">	
 					<img class="eagle" src="images/home/eagle.png" alt="eagle">
 					<img class="moon" src="images/home/moon.png" alt="moon">
 					<img class="star1" src="images/home/star.png" alt="star 1">
@@ -733,6 +732,13 @@
 						menuIcon.classList.remove('active');
 						if (index.anchor === 'home-bottom') {
 							sectionTitleDiv.textContent = 'HOME';
+							document.querySelector('.dessert').classList.add('fadeIn')
+							document.querySelector('.cactus1').classList.add('fadeIn')
+							document.querySelector('.cactus2').classList.add('fadeIn')
+						}else {
+							document.querySelector('.dessert').classList.remove('fadeIn')
+							document.querySelector('.cactus1').classList.remove('fadeIn')
+							document.querySelector('.cactus2').classList.remove('fadeIn')
 						}
 						if (index.anchor === 'aboutus' || index.anchor === 'team' || index.anchor === 'about-second') {
 							sectionTitleDiv.textContent = 'ABOUT US';
