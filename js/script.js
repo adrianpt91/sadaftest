@@ -27,11 +27,11 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const particleRadius = window.innerWidth < 500 ? 2 : 3;;
-const particleCount = window.innerWidth < 500 ? 250 : 500; 
+const particleRadius = window.innerWidth < 500 ? 2 : 2;
+const particleCount = window.innerWidth < 500 ? 250 : 700; 
 const circleRadius = window.innerWidth < 500 ? 200 : 300;
-const maxSpeed = 1;
-const motionRadius = window.innerWidth < 500 ? 40 : 80; 
+const maxSpeed = 2;
+const motionRadius = window.innerWidth < 500 ? 40 : 100; 
 
 let particles = [];
 
@@ -87,79 +87,79 @@ initializeParticles();
 animateParticles();
 
 //carousel slider
-const carousel = document.querySelector(".carousel"),
-firstImg = carousel.querySelectorAll("img")[0],
-arrowIcons = document.querySelectorAll(".wrapper .carousel__control");
+// const carousel = document.querySelector(".carousel"),
+// firstImg = carousel.querySelectorAll("img")[0],
+// arrowIcons = document.querySelectorAll(".wrapper .carousel__control");
 
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+// let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 
-const showHideIcons = () => {
-    // showing and hiding prev/next icon according to carousel scroll left value
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
-}
+// const showHideIcons = () => {
+//     // showing and hiding prev/next icon according to carousel scroll left value
+//     let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
+//     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+//     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+// }
 
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
-        // if clicked icon is left, reduce width value from the carousel scroll left else add to it
-        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
-    });
-});
+// arrowIcons.forEach(icon => {
+//     icon.addEventListener("click", () => {
+//         let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
+//         // if clicked icon is left, reduce width value from the carousel scroll left else add to it
+//         carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+//         setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
+//     });
+// });
 
-const autoSlide = () => {
-    // if there is no image left to scroll then return from here
-    if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+// const autoSlide = () => {
+//     // if there is no image left to scroll then return from here
+//     if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
 
-    positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
-    let firstImgWidth = firstImg.clientWidth + 14;
-    // getting difference value that needs to add or reduce from carousel left to take middle img center
-    let valDifference = firstImgWidth - positionDiff;
+//     positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
+//     let firstImgWidth = firstImg.clientWidth + 14;
+//     // getting difference value that needs to add or reduce from carousel left to take middle img center
+//     let valDifference = firstImgWidth - positionDiff;
 
-    if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-    // if user is scrolling to the left
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-}
+//     if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
+//         return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+//     }
+//     // if user is scrolling to the left
+//     carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+// }
 
-const dragStart = (e) => {
-    // updatating global variables value on mouse down event
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft;
-}
+// const dragStart = (e) => {
+//     // updatating global variables value on mouse down event
+//     isDragStart = true;
+//     prevPageX = e.pageX || e.touches[0].pageX;
+//     prevScrollLeft = carousel.scrollLeft;
+// }
 
-const dragging = (e) => {
-    // scrolling images/carousel to left according to mouse pointer
-    if(!isDragStart) return;
-    e.preventDefault();
-    isDragging = true;
-    carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
-}
+// const dragging = (e) => {
+//     // scrolling images/carousel to left according to mouse pointer
+//     if(!isDragStart) return;
+//     e.preventDefault();
+//     isDragging = true;
+//     carousel.classList.add("dragging");
+//     positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+//     carousel.scrollLeft = prevScrollLeft - positionDiff;
+//     showHideIcons();
+// }
 
-const dragStop = () => {
-    isDragStart = false;
-    carousel.classList.remove("dragging");
+// const dragStop = () => {
+//     isDragStart = false;
+//     carousel.classList.remove("dragging");
 
-    if(!isDragging) return;
-    isDragging = false;
-    autoSlide();
-}
+//     if(!isDragging) return;
+//     isDragging = false;
+//     autoSlide();
+// }
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
+// carousel.addEventListener("mousedown", dragStart);
+// carousel.addEventListener("touchstart", dragStart);
 
-document.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
+// document.addEventListener("mousemove", dragging);
+// carousel.addEventListener("touchmove", dragging);
 
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("touchend", dragStop);
+// document.addEventListener("mouseup", dragStop);
+// carousel.addEventListener("touchend", dragStop);
 
 // Animate divs on work carousel
 var items = document.querySelectorAll('.filter-works img');
@@ -260,3 +260,125 @@ window.addEventListener("click", function(event) {
     closeModal();
   }
 });
+
+//Carousel slider 3D work
+const galleryContainer = document.querySelector('.gallery-container');
+const galleryControlsContainer = document.querySelector('.gallery-controls');
+const galleryControls = ['', ''];
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+class Carousel {
+
+  constructor(container, items, controls) {
+    this.carouselContainer = container;
+    this.carouselControls = controls;
+    this.carouselArray = [...items];
+  }
+
+  updateGallery() {
+    this.carouselArray.forEach(el => {
+      el.classList.remove('gallery-item-1');
+      el.classList.remove('gallery-item-2');
+      el.classList.remove('gallery-item-3');
+      el.classList.remove('gallery-item-4');
+      el.classList.remove('gallery-item-5');
+    });
+
+    this.carouselArray.slice(0, 5).forEach((el, i) => {
+      el.classList.add(`gallery-item-${i+1}`);
+    });
+  }
+
+  setCurrentState(direction){
+    if (direction.className == 'gallery-controls-previous') {
+      this.carouselArray.unshift(this.carouselArray.pop());
+    }else {
+      this.carouselArray.push(this.carouselArray.shift());
+    }
+    this.updateGallery();
+  }
+
+  setControls() {
+    this.carouselControls.forEach(control => {
+      galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
+      document.querySelector(`.gallery-controls-${control}`).innerText = control;
+    });
+  }
+
+  useControls() {
+    const triggers = [...galleryControlsContainer.childNodes];
+    triggers.forEach(control => {
+      control.addEventListener('click', e => {
+        e.preventDefault();
+        this.setCurrentState(control);
+      });
+    });
+  }
+}
+
+const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+
+exampleCarousel.setControls();
+exampleCarousel.useControls();
+
+//Carousel slider 3D team
+const galleryContainerTeam = document.querySelector('.gallery-container-team');
+const galleryControlsContainerTeam = document.querySelector('.gallery-controls-team');
+const galleryControlsTeam = ['', ''];
+const galleryItemsTeam = document.querySelectorAll('.gallery-item-team');
+
+class CarouselTeam {
+
+  constructor(container, items, controls) {
+    this.carouselContainer = container;
+    this.carouselControls = controls;
+    this.carouselArray = [...items];
+  }
+
+  updateGallery() {
+    this.carouselArray.forEach(el => {
+      el.classList.remove('gallery-item-team-1');
+      el.classList.remove('gallery-item-team-2');
+      el.classList.remove('gallery-item-team-3');
+      el.classList.remove('gallery-item-team-4');
+      el.classList.remove('gallery-item-team-5');
+    });
+
+    this.carouselArray.slice(0, 5).forEach((el, i) => {
+      el.classList.add(`gallery-item-team-${i+1}`);
+    });
+  }
+
+  setCurrentState(direction){
+    if (direction.className == 'gallery-controls-team-previous') {
+      this.carouselArray.unshift(this.carouselArray.pop());
+    }else {
+      this.carouselArray.push(this.carouselArray.shift());
+    }
+    this.updateGallery();
+  }
+
+  setControls() {
+    this.carouselControls.forEach(control => {
+      galleryControlsContainerTeam.appendChild(document.createElement('button')).className = `gallery-controls-team-${control}`;
+      document.querySelector(`.gallery-controls-team-${control}`).innerText = control;
+    });
+  }
+
+  useControls() {
+    const triggers = [...galleryControlsContainerTeam.childNodes];
+    triggers.forEach(control => {
+      control.addEventListener('click', e => {
+        e.preventDefault();
+        this.setCurrentState(control);
+      });
+    });
+  }
+}
+
+const exampleCarouselTeam = new CarouselTeam(galleryContainerTeam, galleryItemsTeam, galleryControlsTeam);
+
+exampleCarouselTeam.setControls();
+exampleCarouselTeam.useControls();
+
+
