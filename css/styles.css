@@ -1505,6 +1505,7 @@ header .menu-icon .section-title {
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	overflow: hidden;
 }
 .location .location-text{
 	width: 100%;
@@ -2116,6 +2117,40 @@ header .menu-icon .section-title {
 		font-size: 12px;
 		padding: 1rem 0.25rem;
 	}
+
+	/*Carousel Slider 3D*/
+	.work .gallery-container {
+		height: 250px;
+		max-width: 350px;
+	}
+	
+	.work  .gallery-item {
+		height: 150px;
+		width: 170px;
+	}
+		
+	.work .gallery-item-2, .work .gallery-item-4 {
+		height: 160px;
+		width: 200px;
+	}
+		
+	.work .gallery-item-3 {
+		height: 200px;
+		width: 250px;
+	}
+	
+	.work .next-button, .work .back-button {
+		padding: 1.25rem 0.5rem;
+		z-index: 1;
+	}
+	
+	.work .next-button {
+		right: -2rem;
+	}
+	
+	.work .back-button {
+		left: -2rem;
+	}	
 	
 	/*Carousel*/
 	.work .wrapper{
@@ -2308,4 +2343,53 @@ header .menu-icon .section-title {
 	.footer-fake .location-circle-footer img{
 		width: 100%;
 	}
+
+	/*Team section*/
+	.team .team-text{
+		padding: 12rem 4rem;
+	}
+	.team .team-text h1{
+		font-size: 32px;
+		line-height: 34px;
+	}
+	.team .team-text h4{
+		font-size: 20px;
+		line-height: 24px;
+	}
+	
+	/*Carousel Slider 3D*/	  
+	.team .gallery-container-team {
+		height: 250px;
+		max-width: 350px;
+	  }
+	  
+	.team  .gallery-item-team {
+		height: 150px;
+		width: 170px;
+	  }
+	  
+	  
+	.team .gallery-item-team-2, .team .gallery-item-team-4 {
+		height: 160px;
+		width: 200px;
+	  }	  
+	  
+	.team .gallery-item-team-3 {
+		height: 200px;
+		width: 250px;
+	  }
+	  
+	  
+	.team .next-button, .team .back-button {
+		padding: 1.25rem 0.5rem;
+		z-index: 1;
+	  }
+	  
+	.team .next-button {
+		right: -2rem;
+	  }
+	  
+	.team .back-button {
+		left: -2rem;
+	  }
 }
