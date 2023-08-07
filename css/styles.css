@@ -619,6 +619,7 @@ header .menu-icon .section-title {
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	overflow: hidden;
 }
 .aboutus .about-text{
 	width: 100%;
@@ -626,9 +627,10 @@ header .menu-icon .section-title {
     padding: 20rem 36rem;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     text-align: center;
 	row-gap: 2rem;
+	position: relative;
 }
 .aboutus .about-text h1{
 	font-weight: 700;
@@ -682,6 +684,37 @@ header .menu-icon .section-title {
 .aboutus .about-text .read-more a:hover svg path, 
 .aboutus .about-text .read-more a:focus svg path{ 	
 	fill: #000;
+}
+
+.aboutus .about-text .hand {
+	width: 330px;
+    position: absolute;
+    bottom: 0;
+    left: 10rem;
+}
+.aboutus .about-text .orange-circle {
+	width: 300px;
+    position: absolute;
+    bottom: 4rem;
+    right: 18rem;
+}
+.aboutus .about-text .buildings2 {
+	position: absolute;
+    width: 450px;
+    bottom: 0;
+    right: 4rem;
+}
+.aboutus .about-text .white-star {
+	width: 80px;
+    position: absolute;
+    top: 25rem;
+    right: 40rem;
+}
+.aboutus .about-text .white-dot {
+	position: absolute;
+    width: 28px;
+    top: 30rem;
+    left: 35rem;
 }
 
 /* ********************************** */
