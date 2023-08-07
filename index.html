@@ -739,6 +739,19 @@
 						}
 						if (index.anchor === 'services') {
 							sectionTitleDiv.textContent = 'SERVICES';
+							document.querySelector('.first').classList.add('fadeIn')
+							document.querySelector('.second').classList.add('fadeIn')
+							document.querySelector('.three').classList.add('fadeIn')
+							document.querySelector('.four').classList.add('fadeIn')
+							document.querySelector('.five').classList.add('fadeIn')
+							document.querySelector('.six').classList.add('fadeIn')
+						}else {
+							document.querySelector('.first').classList.remove('fadeIn')
+							document.querySelector('.second').classList.remove('fadeIn')
+							document.querySelector('.three').classList.remove('fadeIn')
+							document.querySelector('.four').classList.remove('fadeIn')
+							document.querySelector('.five').classList.remove('fadeIn')
+							document.querySelector('.six').classList.remove('fadeIn')
 						}
 						if (index.anchor === 'work') {
 							sectionTitleDiv.textContent = 'WORK';
