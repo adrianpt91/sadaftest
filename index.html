@@ -120,7 +120,7 @@
 						sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
 					</p>
 					<div class="discover-more">
-						<a href="#">DISCOVER</a>
+						<a href="#aboutus">DISCOVER</a>
 					</div>
 					<img class="circle" src="images/yellow_circle.png" alt="yellow circle">
 					<img class="building" src="images/dubai_buildings.png" alt="dubai buildings img">
@@ -156,6 +156,49 @@
 					<img class="white-star" src="images/about2/star_white.png" alt="white star">
 					<img class="white-dot" src="images/about2/dot_white.png" alt="white dot">				
 				</div>
+			</div>
+			<!--ABOUT SECOND SECTION-->
+			<div class="section about-second child" id="about_second">
+				<div class="about-second-wrapper">
+					<div class="about-second-text">
+						<h1>OUR STORY</h1>
+						<h4>THE INTEGRATED MARKETING AGENCY FOR ASPIRATIONAL BRANDS</h4>
+						<div class="text-wrapper">
+							<p>We are a forward-thinking, full-service branding and marketing agency, 
+								located in Abu Dhabi, United Arab Emirates, committed to making your 
+								brand stand out in today’s saturated marketplace.
+							</p> 
+
+							<p>Independent, honest and passionate about what we do, we’re here to offer 
+								clients a creative, dynamic, insightful strategy that will keep your 
+								brand fresh, relevant and synergized, while growing your audience and sales. 
+							</p>
+								
+							<p>We know that having the strongest presence and highest visibility on both 
+								digital and physical media platforms is key for ambitious brands looking to 
+								achieve success.
+							</p>
+								
+							<p>Our resource-rich team of creatives and thinkers are experts in brand communication 
+								and design, with the talent and skills needed to bring powerful and persuasive ideas 
+								to fruition across multiple platforms, both online and offline.
+							</p>
+								
+							<p>We know exactly how to tap into a unique brand identity and come up with creative 
+								solutions that deliver results for a multitude of clients operating in different 
+								sectors of the market.
+							</p>
+								
+							<p>We’d love to have a chat with you about how we can help you build your brand and 
+								give it staying power.
+							</p>
+						</div>			
+					</div>
+					<img class="about-second-circle" src="./images/about/layers/phone_circle.png" alt="phone">
+					<img class="about-second-phone" src="./images/about/layers/phone.png" alt="phone">
+					<img class="blue-circle" src="./images/about/layers/blue_circle.png" alt="blue circle">
+					<img class="about-second-tv" src="./images/about/layers/tv.png" alt="about page tv">
+				</div>				
 			</div>
 			<!--SERVICES SECTION-->
 			<div class="section services child">
@@ -557,7 +600,7 @@
 				fitToSection: true,
     			fitToSectionDelay: 1000,
 				verticalCentered: true,
-				anchors: ['home', 'home-bottom', 'aboutus', 'services', 'team', 'work', 'blog', 'contactus', 'location', 'footer'],
+				anchors: ['home', 'home-bottom', 'aboutus', 'about-second', 'services', 'team', 'work', 'blog', 'contactus', 'location', 'footer'],
 				menu: '#menu',
 				afterLoad: function(anchorLink, index){
 					//Variables
@@ -588,7 +631,7 @@
 						if (index.anchor === 'home-bottom') {
 							sectionTitleDiv.textContent = 'HOME';
 						}
-						if (index.anchor === 'aboutus' || index.anchor === 'team') {
+						if (index.anchor === 'aboutus' || index.anchor === 'team' || index.anchor === 'about-second') {
 							sectionTitleDiv.textContent = 'ABOUT US';
 						}
 						if (index.anchor === 'services') {
