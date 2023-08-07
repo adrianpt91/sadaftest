@@ -973,6 +973,7 @@ header .menu-icon .section-title {
 /*Carousel Slider 3D*/
 .team .gallery-team {
 	width: 100%;
+	padding-bottom: 4rem;
   }
   
 .team .gallery-container-team {
@@ -1145,6 +1146,7 @@ header .menu-icon .section-title {
 /*Carousel Slider 3D*/
 .work .gallery {
 	width: 100%;
+	padding-bottom: 4rem;
   }
   
 .work .gallery-container {
