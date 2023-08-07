@@ -716,7 +716,14 @@ header .menu-icon .section-title {
     top: 30rem;
     left: 35rem;
 }
-
+.fp-controlArrow.fp-next {
+	right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #000 !important;
+}
+.fp-controlArrow.fp-prev {
+	border-color: transparent #000 transparent transparent !important;
+}
 /* ********************************** */
 /*               ABOUT SECOND         */
 /* ********************************** */
@@ -800,6 +807,174 @@ header .menu-icon .section-title {
     bottom: 40rem;
     right: 10rem;
     width: 320px;
+}
+/* ********************************** */
+/*               ABOUT THIRD          */
+/* ********************************** */
+.about-third {
+	background: #fff;
+    height: 100vh;
+	background-image: url('../images/about/third_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+}
+.about-third-wrapper {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.about-third .about-third-text{
+	width: 100%;
+    height: 100%;
+    padding: 15rem 50rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+	row-gap: 2rem;
+}
+.about-third .about-third-text h1{
+	font-weight: 700;
+	font-size: 62px;
+	line-height: 72px;
+	text-transform: uppercase;
+}
+
+.about-third .about-third-text p{
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 37px;
+	text-transform: inherit;
+}
+.about-third .about-third-button{
+	display: flex;
+    justify-content: center;
+	padding-bottom: 4rem;
+}
+
+.about-third .about-third-button a{
+	border: 1px solid #000;
+    border-radius: 100%;
+    padding: 4rem 3rem;
+}
+.about-third .about-third-text .text-wrapper {
+	display: flex;
+    flex-direction: column;
+}
+/*Carousel*/
+.about-third .wrapper{
+	display: flex;
+	max-width: 100%;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	padding: 0 32rem;
+	margin-bottom: 20rem;
+  }
+.about-third  .carousel__control {
+	margin-top: -15px;
+	top: 50%;
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	z-index: 1;
+  }
+.about-third .carousel__control--backward {
+	left: 18rem;
+  }
+.about-third .carousel__control--forward {
+	right: 18rem;
+  }
+.about-third .carousel__control--forward svg,
+.about-third .carousel__control--backward svg{
+	width: 80px;
+  }
+.about-third .wrapper .carousel{
+	font-size: 0px;
+	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+	display: flex;
+  }
+.about-third .carousel.dragging{
+	cursor: grab;
+	scroll-behavior: auto;
+  }
+.about-third .carousel.dragging img{
+	pointer-events: none;
+  }
+.about-third .carousel img{
+	height: 450px;
+	object-fit: cover;
+	user-select: none;
+	width: 300px;
+  }
+.about-third .carousel img:first-child{
+	margin-left: 0px;
+  }
+  
+  @media screen and (max-width: 900px) {
+	.about-third .carousel img{
+	  width: calc(100% / 2);
+	}
+  }
+  
+  @media screen and (max-width: 550px) {
+	.about-third .carousel img{
+	  width: 100%;
+	}
+  }
+.about-third .carousel .team-item{
+	position: relative;
+	cursor: pointer;
+	margin-left: 20px;
+}
+.about-third .carousel .team-item .team-item-overlay::before {
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+	border-radius: 20rem;
+	transition: .5s ease;
+	opacity: 0;
+}
+.about-third .carousel .team-item:hover .team-item-overlay::before {
+	opacity: 1;
+}
+.about-third .carousel .team-item .team-more {
+	position: absolute;
+    bottom: 4rem;
+    display: flex;
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    color: #fff;
+    font-size: 24px;
+	font-weight: 700;
+    transition: .5s ease;
+    opacity: 0;
+    z-index: 2;
+    flex-direction: column;
+    text-align: center;
+    white-space: normal;
+    text-transform: uppercase;
+    font-style: normal;
+    row-gap: 1rem;
+}
+.about-third .carousel .team-item .team-more .position{
+	font-size: 20px;
+    font-weight: 400;
+	padding: 0 1rem;
+}
+.about-third .carousel .team-item:hover .team-more{
+	opacity: 1;
 }
 /* ********************************** */
 /*               SERVICES             */
@@ -1920,6 +2095,58 @@ header .menu-icon .section-title {
 		width: 250px;
 	}
 
+	/*ABOUT THIRD*/
+	
+	.about-third .about-third-text{
+		padding: 10rem 35rem 4rem;
+	}
+	.about-third .about-third-text h1{
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.about-third .about-third-text p{
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.about-third .about-third-button{
+		padding-bottom: 2rem;
+	}
+
+	.about-third .about-third-button a{
+		padding: 3rem 3rem;
+	}
+	.about-third .about-third-button a span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+	}
+	.about-third .carousel img{
+		height: auto;
+		width: 220px;
+	}
+	.about-third .wrapper{
+		padding: 0 21rem 4rem;
+	}
+	.about-third .carousel__control--backward {
+		left: 8rem;
+	}
+	.about-third .carousel__control--forward {
+		right: 8rem;
+	}
+	.about-third .carousel__control svg {
+		width: 80px;
+    	height: auto;
+	}
+	.about-third .carousel .team-item .team-more {
+		font-size: 20px;
+	}
+	.about-third .carousel .team-item .team-more .position{
+		font-size: 16px;
+	}
+
 	/*SERVICES*/
 	.services .services-text{
 		padding: 15rem 30rem;
@@ -2342,6 +2569,58 @@ header .menu-icon .section-title {
 		bottom: 8rem;
 		right: 1rem;
 		width: 120px;
+	}
+	/*  ABOUT THIRD  */
+	.about-third .about-third-text{
+		padding: 12rem 4rem 0rem;
+		row-gap: 2rem;
+	}
+	.about-third .about-third-text h1{
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.about-third .about-third-text p{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.about-third .about-third-button{
+		padding-bottom: 2rem;
+	}
+
+	.about-third .about-third-button a{
+		padding: 2rem 2rem;
+	}
+	/*Carousel*/
+	.about-third .wrapper{
+		padding: 0 3rem 6rem;
+		margin-bottom: 6rem;
+	}
+	.about-third .carousel__control--backward {
+		left: 0.5rem;
+	}
+	.about-third .carousel__control--forward {
+		right: 0.5rem;
+	}
+	.about-third .carousel img{
+		height: auto;
+		width: 100px;
+	}  
+	.about-third .carousel .team-item{
+		margin-left: 10px;
+	}
+	.about-third .carousel .team-item .team-more {
+		bottom: 2rem;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+		color: #fff;
+		font-size: 8px;
+	}
+	.about-third .carousel .team-item .team-more .position{
+		font-size: 8px;
+	}
+	.about-third .carousel__control svg {
+		width: 30px;
 	}
 	/*SERVICES*/
 	.services .services-text{
