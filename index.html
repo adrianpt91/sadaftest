@@ -736,6 +736,13 @@
 						}
 						if (index.anchor === 'aboutus' || index.anchor === 'team' || index.anchor === 'about-second') {
 							sectionTitleDiv.textContent = 'ABOUT US';
+							document.querySelector('.hand').classList.add('fadeIn')
+							document.querySelector('.buildings2').classList.add('fadeIn')
+							document.querySelector('.orange-circle').classList.add('fadeIn')
+						}else {
+							document.querySelector('.hand').classList.remove('fadeIn')
+							document.querySelector('.buildings2').classList.remove('fadeIn')
+							document.querySelector('.orange-circle').classList.remove('fadeIn')
 						}
 						if (index.anchor === 'services') {
 							sectionTitleDiv.textContent = 'SERVICES';

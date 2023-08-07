@@ -691,30 +691,77 @@ header .menu-icon .section-title {
     position: absolute;
     bottom: 0;
     left: 10rem;
+	transform: translateY(300px);
+	transition: all 0.7s ease-in-out; 
+	opacity: 0;
 }
 .aboutus .about-text .orange-circle {
 	width: 300px;
     position: absolute;
     bottom: 4rem;
     right: 18rem;
+	transform: translateY(-600px);
+	transition: all 0.5s ease-in-out; 
+	opacity: 0;
 }
 .aboutus .about-text .buildings2 {
 	position: absolute;
     width: 450px;
     bottom: 0;
     right: 4rem;
+	transform: translateY(200px);
+	transition: all 0.4s ease-in; 
+	opacity: 0;
 }
 .aboutus .about-text .white-star {
 	width: 80px;
     position: absolute;
     top: 25rem;
     right: 40rem;
+	animation: zoom-in-zoom-out 1s ease infinite;
 }
+@keyframes zoom-in-zoom-out {
+	0% {
+	  transform: scale(1, 1);
+	}
+	50% {
+	  transform: scale(1.5, 1.5);
+	}
+	100% {
+	  transform: scale(1, 1);
+	}
+  }
 .aboutus .about-text .white-dot {
 	position: absolute;
     width: 28px;
     top: 30rem;
     left: 35rem;
+	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+ 
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
 .fp-controlArrow.fp-next {
 	right: 15px;
