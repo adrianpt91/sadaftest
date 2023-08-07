@@ -11,6 +11,7 @@
 		<link rel="icon" type="image/png" href="images/favicon.png"/>
 		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="stylesheet" href="css/fullpage.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<header>
@@ -45,6 +46,27 @@
 						<path style="display: none;" d="M145.445 64.695V39.2275C145.445 28.1097 141.219 22.3373 129.705 22.0833V22.1747C133.818 22.7743 136.001 26.4328 136.001 33.1605V39.2275V39.9897V60.9348C135.397 65.2946 131.627 68.7702 127.643 68.7702C123.139 68.7702 120.066 65.7621 120.066 55.63C120.066 46.2804 122.554 41.4633 131.181 40.2844L131.172 39.3901C119.573 40.1828 110.631 44.2377 110.631 56.006C110.631 65.386 115.088 69.7153 127.123 69.7153C132.834 69.7153 136.001 65.2946 136.001 63.9633V65.6401C136.001 67.9165 137.728 69.7153 139.808 69.7153H147.079C147.088 69.7153 145.445 67.7234 145.445 64.695Z" fill="black"/>
 					</svg>
 				</a>
+			</div>
+			<!--Menu desktop-->
+			<div class="menu-desktop">
+				<div class="main-menu-desktop">
+					<ul>
+						<a href="https://facebook.com" target="_blank" class="fa fa-facebook"><li></li></a>
+						<a href="https://instagram.com" target="_blank" class="fa fa-instagram"><li></li></a>
+						<a href="https://linkedin.com" target="_blank" class="fa fa-linkedin"><li></li></a>
+						<a href="https://youtube.com" target="_blank" class="fa fa-youtube-play"><li></li></a>
+					</ul>
+					<ul>
+						<a href="#home"><li>HOME</li></a>
+						<a href="#aboutus"><li>ABOUT US</li></a>
+						<a href="#work"><li>WORK</li></a>
+						<a href="#blog"><li>BLOG</li></a>
+						<a href="#services"><li>SERVICES</li></a>
+					</ul>
+				</div>
+				<div class="contact-btn">
+					<a href="#contactus">LET'S TALK</a>
+				</div>
 			</div>
 			<div class="menu-icon">
 				<div class="section-title">
@@ -782,6 +804,15 @@
 							scrollWhite.style.display = 'none';
 							scrollBlack.style.display = 'none';
 						}
+					}
+				},
+				onLeave: function(index, nextIndex, direction){
+					if(nextIndex.anchor!=="home"){
+						document.querySelector('.main-menu-desktop').classList.add('menu-black')
+						document.querySelector('.contact-btn').classList.add('menu-black')
+					}else {
+						document.querySelector('.main-menu-desktop').classList.remove('menu-black')
+						document.querySelector('.contact-btn').classList.remove('menu-black')
 					}
 				}
 		  	});

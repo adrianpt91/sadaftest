@@ -291,7 +291,7 @@ header .menu-icon svg{
 header .menu-icon {
 	cursor: pointer;
 	margin-right: 30px;
-	display: flex;
+	display: none;
     align-items: center;
 }
 
@@ -314,6 +314,60 @@ header .menu-icon .section-title {
 
 .active line {
 	stroke: #fff;
+}
+.menu-desktop {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 4rem;
+	padding-right: 4rem;
+	font-family: 'Roboto';
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.main-menu-desktop {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+	width: 100%;
+    padding-left: 4rem;
+	padding-right: 4rem;
+	transition: all 0.5s ease-in-out;
+}
+.main-menu-desktop ul{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu-desktop a {
+	text-decoration: none;
+	color: #fff;
+	padding: 2rem;
+}
+.menu-desktop li {
+	list-style: none;
+	color: #fff;
+}
+.contact-btn {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+	margin-left: 2rem;
+	transition: all 0.5s ease-in-out;
+}
+.menu-black {
+	background: #000;
+	border-radius: 45px;
 }
 
 /* ********************************** */
@@ -557,21 +611,21 @@ header .menu-icon .section-title {
 .home-bottom .home-bottom-text .eagle {
 	position: absolute;
     width: 210px;
-    left: 10rem;
-    top: 20rem;
+    left: 12rem;
+    top: 26rem;
 	-webkit-animation: move 1s infinite  alternate;
     animation: move 1s infinite  alternate;
 }
 .home-bottom .home-bottom-text .moon {
 	position: absolute;
     width: 130px;
-    right: 32rem;
-    top: 12rem;
+    right: 22rem;
+    top: 18rem;
 	-webkit-animation: rotate-circle 1s infinite  alternate;
     animation: rotate-circle 1s infinite  alternate;
 }
 .home-bottom .home-bottom-text .star1 {
-	top: 15rem;
+	top: 18rem;
     position: absolute;
     width: 85px;
     left: 58rem;
@@ -2481,6 +2535,11 @@ header .menu-icon .section-title {
 
 	header .menu-icon {
 		margin-right: 10px;
+		display: flex;
+	}
+
+	.menu-desktop {
+		display: none;
 	}
 
 	header .menu-icon .section-title {
