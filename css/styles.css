@@ -1144,10 +1144,13 @@ header .menu-icon .section-title {
 .about-third .carousel__control--forward {
 	right: 18rem;
   }
-.about-third .carousel__control--forward svg,
-.about-third .carousel__control--backward svg{
-	width: 80px;
-  }
+.about-third .next-button, .about-third .back-button {
+	border: 1px solid #000;
+	border-radius: 100%;
+	padding: 3rem 2rem;
+	position: absolute;
+	background: transparent;
+}
 .about-third .wrapper .carousel{
 	font-size: 0px;
 	cursor: pointer;
