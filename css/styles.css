@@ -1291,12 +1291,13 @@ header .menu-icon .section-title {
 /*               SERVICES             */
 /* ********************************** */
 .services {
-	background: #FFF;
+	/* background: #FFF; */
     height: 100vh;
-	background-image: url('../images/services_back.png');
+	/* background-image: url('../images/services_back.png');
 	background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+	overflow: hidden;
 }
 .services .services-text{
 	width: 100%;
@@ -1606,12 +1607,13 @@ header .menu-icon .section-title {
 /*               WORK                 */
 /* ********************************** */
 .work {
-	background: #FB6C26;
+	/* background: #FB6C26; */
     height: 100vh;
-	background-image: url('../images/work_back.png');
+	/* background-image: url('../images/work_back.png');
 	background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+	overflow: hidden;
 }
 .work .work-text{
 	width: 100%;
@@ -1873,8 +1875,9 @@ header .menu-icon .section-title {
 /*               BLOG                 */
 /* ********************************** */
 .blog {
-	background: #FFD601;
+	/* background: #FFD601; */
     height: 100vh;
+	overflow: hidden;
 }
 .blog .blog-text{
 	width: 100%;
@@ -2079,13 +2082,14 @@ header .menu-icon .section-title {
 /*               CONTACT US           */
 /* ********************************** */
 .contactus {
-	background: #3338E0;
+	/* background: #3338E0; */
     height: 100vh;
-	background-image: url('../images/contact_back.png');
+	/* background-image: url('../images/contact_back.png');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	position: relative;
+	position: relative; */
+	overflow: hidden;
 }
 .contactus .contactus-text{
 	width: 100%;
