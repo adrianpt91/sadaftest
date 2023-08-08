@@ -241,13 +241,22 @@ const modal = document.getElementById("myModal");
 const btnOpenModal = document.getElementById("openModalBtn");
 const spanCloseModal = document.getElementsByClassName("close")[0];
 const closeModalBtn = document.querySelector(".close-modal");
+const modalContent = document.querySelector('.modal-content');
 
 function openModal() {
-  modal.style.display = "block";
+  modal.style.display = 'block';
+  setTimeout(() => {
+    modalContent.style.transform = 'scale(1)';
+    modalContent.style.opacity = '1';
+  }, 100); // Delay for smoother effect
 }
 
 function closeModal() {
-  modal.style.display = "none";
+  modalContent.style.transform = 'scale(0.6)';
+  modalContent.style.opacity = '0';
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 300); // Match the transition duration
 }
 
 btnOpenModal.addEventListener("click", openModal);
