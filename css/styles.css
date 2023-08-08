@@ -70,6 +70,29 @@ main::-webkit-scrollbar {
 	opacity: 1 !important;
 	transform: translate3d(0,0,0) !important;
 }
+
+/*Video backgrounds utilities*/
+.slide {
+	position: relative;
+}
+.back-video {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+@media (min-aspect-ratio: 16/9){
+	.back-video {
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-aspect-ratio: 16/9){
+	.back-video {
+		width: auto;
+		height: 100%;
+	}
+}
 /* ********************************** */
 /*               MODAL               */
 /* ********************************** */
@@ -530,12 +553,12 @@ header .menu-icon .section-title {
 /*               HOME BOTTOM          */
 /* ********************************** */
 .home-bottom {
-	background: #fff;
+	/* background: #fff; */
     height: 100vh;
-	background-image: url('../images/home2_back.png');
-	background-position: center;
+	/*background-image: url('../images/home2_back.png');*/
+	/* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 /* #parallax-text {
 	transform: scale(1.3);
@@ -730,12 +753,12 @@ header .menu-icon .section-title {
 /*               ABOUT US             */
 /* ********************************** */
 .aboutus {
-	background: #70E1CC;
+	/* background: #70E1CC; */
     height: 100vh;
-	background-image: url('../images/about_back.png');
+	/* background-image: url('../images/about_back.png');
 	background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 	overflow: hidden;
 }
 .aboutus .about-text{
@@ -903,14 +926,14 @@ header .menu-icon .section-title {
 	bottom: 0;
     left: 0;
 	transform: translateY(100px);
-	transition: all 0.5s ease-in; 
+	transition: all 0.3s ease-in; 
 	opacity: 0;
 }
 .aboutus .about-text .about-cactus1 {
 	bottom: 0;
     left: 10rem;
 	transform: translateY(200px);
-	transition: all 0.8s ease-in; 
+	transition: all 0.6s ease-in; 
 	opacity: 0;
 }
 .aboutus .about-text .about-cactus2 {
@@ -962,12 +985,12 @@ header .menu-icon .section-title {
 /*               ABOUT SECOND         */
 /* ********************************** */
 .about-second {
-	background: #fff;
+	/* background: #fff; */
     height: 100vh;
-	background-image: url('../images/about/second_back.png');
+	/* background-image: url('../images/about/second_back.png');
 	background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 	position: relative;
 }
 .about-second-wrapper {
@@ -1046,12 +1069,12 @@ header .menu-icon .section-title {
 /*               ABOUT THIRD          */
 /* ********************************** */
 .about-third {
-	background: #fff;
+	/* background: #fff; */
     height: 100vh;
-	background-image: url('../images/about/third_back.png');
+	/* background-image: url('../images/about/third_back.png');
 	background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 	position: relative;
 }
 .about-third-wrapper {
@@ -1383,12 +1406,12 @@ header .menu-icon .section-title {
 /*               TEAM                 */
 /* ********************************** */
 .team {
-	background: #FFF;
+	/* background: #FFF; */
     height: 100vh;
-	background-image: url('../images/about/third_back.png');
+	/* background-image: url('../images/about/third_back.png');
 	background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 .team .team-text{
 	width: 100%;
