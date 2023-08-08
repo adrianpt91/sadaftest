@@ -268,6 +268,7 @@ header {
 header .logo {
 	margin-top: 0px;
 	margin-left: 30px;
+	transition: all 0.3s ease-in-out;
 }
 
 header .logo .white{
@@ -325,7 +326,7 @@ header .menu-icon .section-title {
     padding-left: 4rem;
 	padding-right: 4rem;
 	font-family: 'Roboto';
-	font-size: 24px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
@@ -339,7 +340,7 @@ header .menu-icon .section-title {
 	width: 100%;
     padding-left: 4rem;
 	padding-right: 4rem;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .main-menu-desktop ul{
 	display: flex;
@@ -351,7 +352,7 @@ header .menu-icon .section-title {
 .menu-desktop a {
 	text-decoration: none;
 	color: #fff;
-	padding: 2rem;
+	padding: 1.5rem;
 }
 .menu-desktop li {
 	list-style: none;
@@ -363,13 +364,17 @@ header .menu-icon .section-title {
     align-items: center;
     width: 250px;
 	margin-left: 2rem;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .menu-black {
 	background: #000;
 	border-radius: 45px;
 }
-
+.main-menu-desktop a:hover li,
+.main-menu-desktop a:hover,
+.menu-desktop .contact-btn a:hover{
+	color: #FFD601;
+}
 /* ********************************** */
 /*               HOME                 */
 /* ********************************** */

@@ -56,7 +56,7 @@
 						<a href="https://linkedin.com" target="_blank" class="fa fa-linkedin"><li></li></a>
 						<a href="https://youtube.com" target="_blank" class="fa fa-youtube-play"><li></li></a>
 					</ul>
-					<ul>
+					<ul class="main-menu-links">
 						<a href="#home"><li>HOME</li></a>
 						<a href="#aboutus"><li>ABOUT US</li></a>
 						<a href="#work"><li>WORK</li></a>
@@ -724,8 +724,6 @@
 				menu: '#menu',
 				afterLoad: function(anchorLink, index){
 					//Variables
-					const logoWhite = document.querySelector('.white');
-					const logoBlack = document.querySelector('.black');
 					const mouse = document.querySelector('.mouse');
 					const menuIcon = document.querySelector('.menu-icon svg');
 					const sectionTitleDiv = document.querySelector('.section-title');
@@ -733,8 +731,6 @@
 					const scrollWhite = document.querySelector('.white_scroll');
 					const scrollBlack = document.querySelector('.black_scroll');
 					if (index.anchor === 'home') {
-						logoWhite.style.display = 'block';
-						logoBlack.style.display = 'none';
 						scrollWhite.style.display = 'block';
 						scrollBlack.style.display = 'none';
 						mouse.style.display = 'flex';
@@ -742,8 +738,6 @@
 						menuIcon.classList.add('active');
 						sectionTitleDiv.innerHTML = '';
 					}else {
-						logoWhite.style.display = 'none';
-						logoBlack.style.display = 'block';
 						scrollWhite.style.display = 'none';
 						scrollBlack.style.display = 'block';
 						mouse.classList.add('mouseActive');
@@ -812,9 +806,13 @@
 					if(nextIndex.anchor!=="home"){
 						document.querySelector('.main-menu-desktop').classList.add('menu-black')
 						document.querySelector('.contact-btn').classList.add('menu-black')
+						document.querySelector('.white').style.display = 'none';
+						document.querySelector('.black').style.display = 'block';
 					}else {
 						document.querySelector('.main-menu-desktop').classList.remove('menu-black')
 						document.querySelector('.contact-btn').classList.remove('menu-black')
+						document.querySelector('.white').style.display = 'block';
+						document.querySelector('.black').style.display = 'none';
 					}
 				}
 		  	});
