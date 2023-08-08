@@ -57,11 +57,11 @@
 						<a href="https://youtube.com" target="_blank" class="fa fa-youtube-play"><li></li></a>
 					</ul>
 					<ul class="main-menu-links">
-						<a href="#home"><li>HOME</li></a>
-						<a href="#aboutus"><li>ABOUT US</li></a>
-						<a href="#services"><li>SERVICES</li></a>
-						<a href="#work"><li>WORK</li></a>
-						<a href="#blog"><li>BLOG</li></a>						
+						<li><a class="home-link" href="#home">HOME</a></li>
+						<li><a href="#aboutus">ABOUT US</a></li>
+						<li><a href="#services">SERVICES</a></li>
+						<li><a href="#work">WORK</a></li>
+						<li><a href="#blog">BLOG</a></li>						
 					</ul>
 				</div>
 				<div class="contact-btn">
@@ -97,11 +97,11 @@
 		<div class="menu">
 			<div class="menuItems">
 				<ul class="main-menu">
-					<a href="#home"><li>HOME</li></a>
-					<a href="#aboutus"><li>ABOUT US</li></a>
-					<a href="#portafolio"><li>PORTAFOLIO</li></a>
-					<a href="#services"><li>SERVICES</li></a>
-					<a href="#contactus"><li>LET'S TALK</li></a>
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#aboutus">ABOUT US</a></li>
+					<li><a href="#portafolio">PORTAFOLIO</a></li>
+					<li><a href="#services">SERVICES</a></li>
+					<li><a href="#contactus">LET'S TALK</a></li>
 				</ul>
 				<ul class="social-buttons">
 					<div class="first-block">
@@ -748,6 +748,11 @@
 					const header = document.querySelector('header');
 					const scrollWhite = document.querySelector('.white_scroll');
 					const scrollBlack = document.querySelector('.black_scroll');
+					const targetLinkId = 'a[href="#' + index.anchor + '"]';
+					document.querySelector('.contact-btn a').classList.remove('active')
+					document.querySelectorAll('.main-menu-links a').forEach(function(link) {
+						link.classList.remove('active');
+					});					
 					if (index.anchor === 'home') {
 						scrollWhite.style.display = 'block';
 						scrollBlack.style.display = 'none';
@@ -755,6 +760,7 @@
 						mouse.classList.remove('mouseActive');
 						menuIcon.classList.add('active');
 						sectionTitleDiv.innerHTML = '';
+						document.querySelector('.home-link').classList.add('active');
 					}else {
 						scrollWhite.style.display = 'none';
 						scrollBlack.style.display = 'block';
@@ -765,10 +771,14 @@
 							document.querySelector('.dessert').classList.add('fadeIn')
 							document.querySelector('.cactus1').classList.add('fadeIn')
 							document.querySelector('.cactus2').classList.add('fadeIn')
+							document.querySelector('.home-link').classList.add('active');
 						}else {
 							document.querySelector('.dessert').classList.remove('fadeIn')
 							document.querySelector('.cactus1').classList.remove('fadeIn')
 							document.querySelector('.cactus2').classList.remove('fadeIn')
+							if (document.querySelector(targetLinkId)) {
+								document.querySelector(targetLinkId).classList.add('active');
+							}							
 						}
 						if (index.anchor === 'aboutus' || index.anchor === 'team' || index.anchor === 'about-second') {
 							sectionTitleDiv.textContent = 'ABOUT US';
@@ -810,6 +820,7 @@
 						}
 						if (index.anchor === 'contactus' || index.anchor === 'location') {
 							sectionTitleDiv.textContent = 'CONTACT US';
+							document.querySelector('.contact-btn a').classList.add('active')
 						}
 						if (index.anchor === 'footer') {
 							sectionTitleDiv.textContent = '';
@@ -817,6 +828,9 @@
 							logoBlack.style.display = 'none';
 							scrollWhite.style.display = 'none';
 							scrollBlack.style.display = 'none';
+							document.querySelector('.menu-desktop').style.display = 'none'
+						}else {
+							document.querySelector('.menu-desktop').style.display = 'flex'
 						}
 					}
 				},

@@ -398,6 +398,10 @@ header .menu-icon .section-title {
 .menu-desktop .contact-btn a:hover{
 	color: #FFD601;
 }
+.main-menu-links a.active,
+.contact-btn a.active {
+    color: #FFD601; /* Change this color to your desired active color */
+}
 /* ********************************** */
 /*               HOME                 */
 /* ********************************** */
