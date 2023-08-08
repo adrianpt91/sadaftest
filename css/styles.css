@@ -1873,7 +1873,7 @@ header .menu-icon .section-title {
 /*               BLOG                 */
 /* ********************************** */
 .blog {
-	background: #FFF;
+	background: #FFD601;
     height: 100vh;
 }
 .blog .blog-text{
@@ -1891,7 +1891,7 @@ header .menu-icon .section-title {
 	font-size: 62px;
 	line-height: 72px;
 	text-transform: uppercase;
-	color: #3338E0;
+	color: #000;
 }
 .blog .blog-text h4{
 	font-weight: 400;
