@@ -907,13 +907,8 @@ header .menu-icon .section-title {
 	40% {transform: translateY(-30px);}
 	60% {transform: translateY(-15px);}
 }
-.fp-controlArrow.fp-next {
-	right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #000 !important;
-}
-.fp-controlArrow.fp-prev {
-	border-color: transparent #000 transparent transparent !important;
+.fp-controlArrow.fp-next, .fp-controlArrow.fp-prev {
+	display: none;
 }
 .aboutus .about-text .about-light {
 	top: 0;

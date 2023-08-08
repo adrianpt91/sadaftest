@@ -712,6 +712,8 @@
 			  loadingFrame.style.display = 'none';
 			});
 			//Full page
+			var slideIndexS = 0,
+    		sliding = false;
 			var myFullpage = new fullpage('#fullpage', {
 				css3:true,
 				scrollingSpeed: 1200,
@@ -725,11 +727,6 @@
 				loopHorizontal: true,
 				continuousHorizontal: true,
 				dragAndMove: true,
-				controlArrows: true,
-				controlArrowsHTML: [
-					'<div class="fp-arrow"></div>', 
-					'<div class="fp-arrow"></div>'
-				],
     			slidesNavPosition: 'bottom',
 				anchors: ['home', 'home-bottom', 'aboutus', 'services', 'work', 'blog', 'contactus', 'location', 'footer'],
 				menu: '#menu',
@@ -813,7 +810,10 @@
 						}
 					}
 				},
-				onLeave: function(index, nextIndex, direction){
+				afterSlideLoad: function (section, origin, destination) {
+					slideIndexS = destination.index + 1;
+				},
+				onLeave: function(index, nextIndex, origin){
 					if(nextIndex.anchor!=="home"){
 						document.querySelector('.main-menu-desktop').classList.add('menu-black')
 						document.querySelector('.contact-btn').classList.add('menu-black')
@@ -824,6 +824,17 @@
 						document.querySelector('.contact-btn').classList.remove('menu-black')
 						document.querySelector('.white').style.display = 'block';
 						document.querySelector('.black').style.display = 'none';
+					}
+					if (index.index === 2 && !sliding) {
+						if (index.index < nextIndex.index && slideIndexS < 4) {
+						  myFullpage.moveSlideRight();
+						  return false;
+						} else if (index.index > nextIndex.index && slideIndexS > 1) {
+						  myFullpage.moveSlideLeft();
+						  return false;
+						}
+					  } else if (sliding) {
+						return false;
 					}
 				}
 		  	});
