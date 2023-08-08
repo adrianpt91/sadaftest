@@ -376,6 +376,11 @@ header .menu-icon .section-title {
 	text-decoration: none;
 	color: #fff;
 	padding: 1.5rem;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+	transition: all 0.3s ease-in-out;
 }
 .menu-desktop li {
 	list-style: none;
@@ -388,6 +393,10 @@ header .menu-icon .section-title {
     width: 250px;
 	margin-left: 2rem;
 	transition: all 0.3s ease-in-out;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .menu-black {
 	background: #000;
@@ -400,7 +409,32 @@ header .menu-icon .section-title {
 }
 .main-menu-links a.active,
 .contact-btn a.active {
-    color: #FFD601; /* Change this color to your desired active color */
+    color: #FFD601;
+}
+.menu-desktop .menu-img {
+	position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+.main-menu-desktop a:hover .menu-img,
+.menu-desktop .contact-btn a:hover .menu-img{
+	opacity: 1;
+}
+.main-menu-links a.active .menu-img,
+.contact-btn a.active .menu-img{
+	opacity: 1;
+}
+.main-menu-desktop a:hover span,
+.menu-desktop .contact-btn a:hover span{
+	opacity: 0;
+}
+.main-menu-links a.active span,
+.contact-btn a.active span{
+	opacity: 0;
 }
 /* ********************************** */
 /*               HOME                 */
