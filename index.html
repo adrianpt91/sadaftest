@@ -120,7 +120,7 @@
 		
 		<div id="fullpage">	
 			<!--COVER SECTION-->					
-			<div class="section home child">
+			<div class="section home child" id="section0">
 				<div class="logo-circle">
 					<div id="sadafSlider">						
 						<div class="slides">
@@ -836,8 +836,8 @@
 					  } else if (sliding) {
 						return false;
 					}
-					if (index.anchor === 'footer') {
-						document.getElementById('back_top').click();
+					if (index.index === 8) {
+						//myFullpage.moveTo(1);
 					}
 				}
 		  	});
