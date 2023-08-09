@@ -407,12 +407,9 @@ header .menu-icon .section-title {
 	background: #000;
 	border-radius: 45px;
 }
-.main-menu-desktop a:hover li,
-.main-menu-desktop a:hover,
 .menu-desktop .contact-btn a:hover{
 	color: #FFD601;
 }
-.main-menu-links a.active,
 .contact-btn a.active {
     color: #FFD601;
 }
@@ -420,10 +417,14 @@ header .menu-icon .section-title {
 	position: absolute;
     width: 45px;
     height: 45px;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 50%;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
+}
+.menu-desktop .menu-img img{
+	width: 100%;
+	height: 100%;
 }
 .main-menu-desktop a:hover .menu-img,
 .menu-desktop .contact-btn a:hover .menu-img{
@@ -433,12 +434,10 @@ header .menu-icon .section-title {
 .contact-btn a.active .menu-img{
 	opacity: 1;
 }
-.main-menu-desktop a:hover span,
-.menu-desktop .contact-btn a:hover span{
+.main-menu-desktop a:hover span{
 	opacity: 0;
 }
-.main-menu-links a.active span,
-.contact-btn a.active span{
+.main-menu-links a.active span{
 	opacity: 0;
 }
 /* ********************************** */
