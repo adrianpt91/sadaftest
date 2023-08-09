@@ -768,7 +768,7 @@
 					document.querySelector('.contact-btn a').classList.remove('active')
 					document.querySelectorAll('.main-menu-links a').forEach(function(link) {
 						link.classList.remove('active');
-					});					
+					});		
 					if (index.anchor === 'home') {
 						scrollWhite.style.display = 'block';
 						scrollBlack.style.display = 'none';
@@ -797,20 +797,21 @@
 							}							
 						}
 						if (index.anchor === 'aboutus' || index.anchor === 'team' || index.anchor === 'about-second') {
-							sectionTitleDiv.textContent = 'ABOUT US';
+							sectionTitleDiv.textContent = 'ABOUT US';							
+							//animate first slide elements
 							document.querySelector('.about-light').classList.add('fadeIn')
 							document.querySelector('.about-floor').classList.add('fadeIn')
 							document.querySelector('.about-cactus1').classList.add('fadeIn')
 							document.querySelector('.about-cactus2').classList.add('fadeIn')
 							document.querySelector('.about-tv').classList.add('fadeIn')
-							document.querySelector('.about-phone').classList.add('fadeIn')
+							document.querySelector('.about-phone').classList.add('fadeIn')							
 						}else {
 							document.querySelector('.about-light').classList.remove('fadeIn')
 							document.querySelector('.about-floor').classList.remove('fadeIn')
 							document.querySelector('.about-cactus1').classList.remove('fadeIn')
 							document.querySelector('.about-cactus2').classList.remove('fadeIn')
 							document.querySelector('.about-tv').classList.remove('fadeIn')
-							document.querySelector('.about-phone').classList.remove('fadeIn')
+							document.querySelector('.about-phone').classList.remove('fadeIn')							
 						}
 						if (index.anchor === 'services') {
 							sectionTitleDiv.textContent = 'SERVICES';
@@ -852,6 +853,25 @@
 				},
 				afterSlideLoad: function (section, origin, destination) {
 					slideIndexS = destination.index + 1;
+					if (destination.index === 1) {
+						//Animate second slide elements
+						document.querySelector('.about-second-floor').classList.add('fadeIn')
+						document.querySelector('.about-second-cactus1').classList.add('fadeIn')
+						document.querySelector('.about-second-cactus2').classList.add('fadeIn')
+						document.querySelector('.about-second-burj').classList.add('fadeIn')
+						document.querySelector('.about-second-frame').classList.add('fadeIn')
+						document.querySelector('.about-second-church').classList.add('fadeIn')
+						document.querySelector('.about-second-buildings').classList.add('fadeIn')
+					}else {
+						//removing animation
+						document.querySelector('.about-second-floor').classList.remove('fadeIn')
+						document.querySelector('.about-second-cactus1').classList.remove('fadeIn')
+						document.querySelector('.about-second-cactus2').classList.remove('fadeIn')
+						document.querySelector('.about-second-burj').classList.remove('fadeIn')
+						document.querySelector('.about-second-frame').classList.remove('fadeIn')
+						document.querySelector('.about-second-church').classList.remove('fadeIn')
+						document.querySelector('.about-second-buildings').classList.remove('fadeIn')
+					}
 				},
 				onLeave: function(index, nextIndex, origin){
 					if(nextIndex.anchor!=="home"){

@@ -1110,48 +1110,78 @@ header .menu-icon .section-title {
 .about-second .about-second-wrapper .about-second-floor{
 	bottom: 0;
     left: 0;
-    transition: all 0.3s ease-in;
+    transform: translateY(100px);
+	transition: all 0.5s ease-in; 
+	opacity: 0;
 }
 .about-second .about-second-wrapper .about-second-cactus1{
 	bottom: 0;
     left: -4rem;
+	transform: translateY(200px);
+	transition: all 1.2s ease-in; 
+	opacity: 0;
 }
 .about-second .about-second-wrapper .about-second-cactus2{
 	bottom: 0;
     right: -2rem;
     width: 250px;
+	transform: translateY(200px);
+	transition: all 1.2s ease-in; 
+	opacity: 0;
+	transition-delay: 0.8s;
 }
 .about-second .about-second-wrapper .about-second-burj{
 	bottom: 0;
     left: 16rem;
+	transform: translateY(-600px);
+	transition: all 0.8s ease-in; 
+	opacity: 0;
 }
 .about-second .about-second-wrapper .about-second-frame{
 	bottom: 0;
     left: 28rem;
+	transform: translateY(-800px);
+	transition: all 1s ease-in; 
+	opacity: 0;
+	transition-delay: 0.5s;
 }
 .about-second .about-second-wrapper .about-second-dot{
 	bottom: 28rem;
     left: 55rem;
+	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
 }
 .about-second .about-second-wrapper .about-second-yellow-star{
 	top: 15rem;
     left: 32rem;
+	animation: zoom-in-zoom-out 1s ease infinite;
 }
 .about-second .about-second-wrapper .about-second-blue-star{
 	right: 18rem;
     bottom: 42rem;
+	animation: zoom-in-zoom-out 1s ease infinite;
 }
 .about-second .about-second-wrapper .about-second-buildings{
 	bottom: 0;
     right: 0;
+	transform: translateY(100px);
+	transition: all 1s ease-in; 
+	opacity: 0;
 }
 .about-second .about-second-wrapper .about-second-moon{
 	right: 10rem;
     top: 20rem;
+	animation: zoom-in-zoom-out 1s ease infinite;
 }
 .about-second .about-second-wrapper .about-second-church{
 	bottom: 0;
     left: 44rem;
+	transform: translateY(-800px);
+	transition: all 1s ease-in; 
+	opacity: 0;
+	transition-delay: 1s;
 }
 /* ********************************** */
 /*               ABOUT THIRD          */
